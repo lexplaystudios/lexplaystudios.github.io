@@ -15,29 +15,46 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
         }
         .container {
             max-width: 800px;
             width: 100%;
+            text-align: center;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
         }
         h1 {
             color: #264653;
-            font-size: 3em;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         .game {
             background-color: #ffffff;
             border-radius: 12px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px R12px rgba(0,0,0,0.1);
             text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
-        .game h2 {
+        .game-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            flex-shrink: 0;
+        }
+        .game-info h2 {
             margin-top: 0;
+            margin-bottom: 5px;
             color: #2A9D8F;
         }
-        .game p {
+        .game-info p {
+            margin: 0;
             line-height: 1.6;
         }
         footer {
@@ -51,20 +68,26 @@
 
     <div class="container">
         <header>
+            <img src="lexplay_logo.png" alt="LexPlay Studios Logo" class="logo">
             <h1>LexPlay Studios</h1>
-            <p>Mobil oyun dünyasına hoş geldiniz!</p>
         </header>
 
         <main>
             <div class="game">
-                <h2>WordUP!</h2>
-                <p>2048 mekaniği ile kelime bulmacasını birleştiren zeka oyunu. Harfleri kaydırın, birleştirin ve hedef kelimeyi oluşturun!</p>
+                <img src="WordUP_Icon.png" alt="WordUP! Icon" class="game-icon">
+                <div class="game-info">
+                    <h2>WordUP!</h2>
+                    <p>2048 mekaniği ile kelime bulmacasını birleştiren zeka oyunu. Harfleri kaydırın, birleştirin ve hedef kelimeyi oluşturun!</p>
                 </div>
+            </div>
 
             <div class="game">
-                <h2>Kelime Zinciri</h2>
-                <p>"Kelime Zinciri, Türkçe kelime dağarcığınıza ve hızınıza meydan okuyan, eğlenceli ve rekabetçi bir kelime oyunudur. Yapay zekaya karşı kıyasıya bir mücadeleye hazır mısınız?</p>
-                 </div>
+                <img src="KelimeZinciri_Icon.png" alt="Kelime Zinciri Icon" class="game-icon">
+                <div class="game-info">
+                    <h2>Kelime Zinciri</h2>
+                    <p>"Kelime Zinciri, Türkçe kelime dağarcığınıza ve hızınıza meydan okuyan, eğlenceli ve rekabetçi bir kelime oyunudur. Yapay zekaya karşı kıyasıya bir mücadeleye hazır mısınız?</p>
+                </div>
+            </div>
         </main>
 
         <footer>
