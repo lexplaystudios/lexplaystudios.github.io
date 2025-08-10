@@ -36,12 +36,20 @@
             border-radius: 5px;
             font-family: 'Courier New', Courier, monospace;
             word-wrap: break-word;
+            /* YENİ EKLENDİ: Kullanıcının metni seçmesini kolaylaştırır */
+            user-select: all; 
         }
         .footer {
             margin-top: 30px;
             text-align: center;
             font-size: 0.9em;
             color: #777;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 1em; /* Maddeler arasına boşluk ekledik */
         }
     </style>
 </head>
@@ -54,12 +62,21 @@
 
         <h2>Hesap Silme Talebi Nasıl Yapılır?</h2>
         <p>"Kelime Zinciri" hesabınızı ve ilgili tüm kişisel verilerinizi silmek için lütfen aşağıdaki adımları izleyin:</p>
+        
+        <!-- --- DEĞİŞİKLİK BURADA BAŞLIYOR --- -->
         <ol>
             <li>Hesabınızla ilişkili olan e-posta adresinizden bir e-posta gönderin.</li>
-            <li><strong>Alıcı:</strong> <span class="email-box">eiskender61@gmail.com</span></li>
-            <li><strong>Konu:</strong> <span class="email-box">Kelime Zinciri Hesap Silme Talebi</span></li>
+            <li>
+                <strong>Alıcı:</strong>
+                <div class="email-box">eiskender61@gmail.com</div>
+            </li>
+            <li>
+                <strong>Konu:</strong>
+                <div class="email-box">Kelime Zinciri Hesap Silme Talebi</div>
+            </li>
             <li><strong>E-posta İçeriği:</strong> Silinmesini istediğiniz hesabın kullanıcı adını veya e-posta adresini belirtmeniz yeterlidir.</li>
         </ol>
+        <!-- --- DEĞİŞİKLİK BURADA BİTİYOR --- -->
 
         <h2>Hangi Veriler Silinecek?</h2>
         <p>Hesap silme talebiniz onaylandığında, aşağıdaki veriler sistemlerimizden <strong>kalıcı olarak</strong> silinecektir:</p>
