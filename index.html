@@ -6,94 +6,98 @@
     <title>LexPlay Studios</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f0f2f5;
             color: #333;
             margin: 0;
-            padding: 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
         .container {
-            max-width: 800px;
             width: 100%;
+            max-width: 700px;
+            padding: 20px;
+            box-sizing: border-box;
             text-align: center;
         }
         .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+            margin-top: 40px;
         }
         h1 {
-            color: #264653;
             font-size: 2.5em;
-            margin-bottom: 10px;
+            color: #1c1e21;
+            margin: 10px 0 40px 0;
         }
-        .game {
-            background-color: #ffffff;
+        /* DEĞİŞİKLİK: Kartlar artık tıklanabilir link (a etiketi) */
+        .game-card {
+            background-color: #fff;
             border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px R12px rgba(0,0,0,0.1);
-            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            text-align: left;
+            text-decoration: none; /* Link alt çizgisini kaldır */
+            color: inherit; /* Link rengini normal metin rengi yap */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
         }
         .game-icon {
             width: 80px;
             height: 80px;
-            border-radius: 16px;
-            flex-shrink: 0;
+            margin-right: 20px;
+            border-radius: 10px;
         }
         .game-info h2 {
-            margin-top: 0;
-            margin-bottom: 5px;
-            color: #2A9D8F;
+            margin: 0 0 5px 0;
+            color: #050505;
         }
         .game-info p {
             margin: 0;
-            line-height: 1.6;
+            color: #65676b;
         }
         footer {
-            margin-top: 40px;
+            margin-top: auto;
+            padding: 20px;
             font-size: 0.9em;
-            color: #777;
+            color: #888;
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <header>
-            <img src="lexplay_logo.png" alt="LexPlay Studios Logo" class="logo">
-            <h1>LexPlay Studios</h1>
-        </header>
+        <img src="https://lexplaystudios.github.io/assets/images/lps.png" alt="LexPlay Studios Logo" class="logo">
+        <h1>LexPlay Studios</h1>
 
-        <main>
-            <div class="game">
-                <img src="WordUP_Icon.png" alt="WordUP! Icon" class="game-icon">
-                <div class="game-info">
-                    <h2>WordUP!</h2>
-                    <p>2048 mekaniği ile kelime bulmacasını birleştiren zeka oyunu. Harfleri kaydırın, birleştirin ve hedef kelimeyi oluşturun!</p>
-                </div>
+        <!-- WordUp Kartı Artık Bir Link -->
+        <a href="./wordup.html" class="game-card">
+            <img src="https://lexplaystudios.github.io/assets/images/wordup.png" alt="WordUp! Icon" class="game-icon">
+            <div class="game-info">
+                <h2>WordUp!</h2>
+                <p>2048 mekaniği ile kelime bulmacasını birleştiren zeka oyunu. Harfleri kaydırın, birleştirin ve hedef kelimeyi oluşturun!</p>
             </div>
+        </a>
 
-            <div class="game">
-                <img src="KelimeZinciri_Icon.png" alt="Kelime Zinciri Icon" class="game-icon">
-                <div class="game-info">
-                    <h2>Kelime Zinciri</h2>
-                    <p>"Kelime Zinciri, Türkçe kelime dağarcığınıza ve hızınıza meydan okuyan, eğlenceli ve rekabetçi bir kelime oyunudur. Yapay zekaya karşı kıyasıya bir mücadeleye hazır mısınız?</p>
-                </div>
+        <!-- Kelime Zinciri Kartı Artık Bir Link -->
+        <a href="./kelime-zinciri.html" class="game-card">
+            <img src="https://lexplaystudios.github.io/assets/images/kz.png" alt="Kelime Zinciri Icon" class="game-icon">
+            <div class="game-info">
+                <h2>Kelime Zinciri</h2>
+                <p>"Kelime Zinciri, Türkçe kelime dağarcığınıza ve hızınıza meydan okuyan, eğlenceli ve rekabetçi bir kelime oyunudur. Yapay zekaya karşı kıyasıya bir mücadeleye hazır mısınız?</p>
             </div>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 LexPlay Studios. Tüm hakları saklıdır.</p>
-        </footer>
+        </a>
     </div>
 
+    <footer>
+        <p>&copy; 2025 LexPlay Studios. Tüm hakları saklıdır.</p>
+    </footer>
 </body>
 </html>
